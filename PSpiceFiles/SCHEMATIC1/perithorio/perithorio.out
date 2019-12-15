@@ -1,0 +1,175 @@
+
+**** 09/24/16 22:58:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-perithorio"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\perithorio.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "perithorio.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/ORCAD/ORCAD_16.6_LITE/TOOLS/pspice/library/mosfets.lib" 
+* From [PSPICE NETLIST] section of C:\Users\DELLGR\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.AC DEC 10 1 100Meg
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source JOHNIE 
+V_Vdd         N07490 0 1.88Vdc
+M_M7         N07362 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=16u         
+M_M8         N07182 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=2.9u         
+M_M3         N07596 N07596 N07490 N07490 PFET  
++ L=1u  
++ W=1u         
+C_CL         0 N07362  2.27p  TC=0,0 
+M_M5         N07140 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=2.9u         
+V_Vss         0 N07230 1.88Vdc
+M_M1         N07596 N08398 N07140 N07140 NFET  
++ L=1u  
++ W=11u         
+M_M2         N07428 0 N07140 N07140 NFET  
++ L=1u  
++ W=11u         
+I_IREF         N07490 N07182 DC 49.9u  
+C_Cc         N07362 N07428  1.5p  TC=0,0 
+M_M6         N07362 N07428 N07490 N07490 PFET  
++ L=1u  
++ W=12u         
+M_M4         N07428 N07596 N07490 N07490 PFET  
++ L=1u  
++ W=1u         
+V_V1         N08398 0 DC 0Vdc AC 1Vac 
+
+**** RESUMING perithorio.cir ****
+.END
+
+**** 09/24/16 22:58:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-perithorio"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\perithorio.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NFET            PFET            
+               NMOS            PMOS            
+       LEVEL    3               3            
+         TPG                   -1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD  164.700000E-09   22.000000E-09 
+         VTO     .786           -.9056       
+          KP   96.379000E-06   29.352000E-06 
+       GAMMA     .5863           .4863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH   85.45          104.7          
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .85         
+        PBSW     .8              .85         
+          CJ  385.410000E-06  484.470000E-06 
+        CJSW  139.400000E-12  164.570000E-12 
+          MJ    1.1854           .5027       
+        MJSW     .125195         .217168     
+        CGSO  402.410000E-12   53.752000E-12 
+        CGDO  402.410000E-12   53.752000E-12 
+        CGBO  361.440000E-12  336.500000E-12 
+        NSUB   16.160000E+15   18.900000E+15 
+         NFS    5.000000E+12    3.460000E+12 
+         TOX   21.200000E-09   21.200000E-09 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  591.7           180.2          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  208.200000E+03  373.200000E+03 
+       DELTA     .6967          1.52         
+       THETA     .08122          .1248       
+         ETA     .07066          .1641       
+       KAPPA     .1396          9.694        
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 09/24/16 22:58:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-perithorio"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\perithorio.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N07140)    -.8433 (N07182)    -.7249 (N07230)   -1.8800 (N07362)    -.2937     
+
+(N07428)    -.4219 (N07490)    1.8800 (N07596)    -.4219 (N08398)    0.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -4.409E-04
+    V_Vss       -4.409E-04
+    V_V1         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.66E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/24/16 22:58:42 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-perithorio"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\perithorio.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .03
+

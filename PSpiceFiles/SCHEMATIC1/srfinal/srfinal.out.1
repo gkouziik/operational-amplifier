@@ -1,0 +1,79 @@
+
+**** 09/24/16 21:45:37 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-srfinal"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\srfinal.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "srfinal.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/ORCAD/ORCAD_16.6_LITE/TOOLS/pspice/library/mosfets.lib" 
+* From [PSPICE NETLIST] section of C:\Users\DELLGR\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10us 0 
+.TEMP 0 10 20 30 40 50 60 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source JOHNIE 
+V_Vdd         N07490 0 1.827Vdc
+M_M7         N07362 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=6u         
+M_M8         N07182 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=3.461u         
+M_M3         N07596 N07596 N07490 N07490 PFET  
++ L=1u  
++ W=3u         
+C_CL         0 N07362  2.09p  TC=0,0 
+M_M5         N07140 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=3.461u         
+V_Vss         0 N07230 1.827Vdc
+M_M1         N07596 N07362 N07140 N07140 NFET  
++ L=1u  
++ W=3.2242u         
+M_M2         N07428 N08516 N07140 N07140 NFET  
++ L=1u  
++ W=3.2242u         
+I_IREF         N07490 N07182 DC 49.19u  
+C_Cc         N07362 N07428  1.5p  TC=0,0 
+M_M6         N07362 N07428 N07490 N07490 PFET  
++ L=1u  
++ W=12u         
+M_M4         N07428 N07596 N07490 N07490 PFET  
++ L=1u  
++ W=3u         
+V_v9         N08516 0  
++PULSE -1 1 1n 1n 
+V_Vin         M_UN0001 M_UN0002 DC 0Vdc AC 0.1Vac 
+
+**** RESUMING srfinal.cir ****
+.END
+
+ERROR(ORPSIM-15141): Less than 2 connections at node M_UN0001.
+
+ERROR(ORPSIM-15141): Less than 2 connections at node M_UN0002.
+
+ERROR(ORPSIM-15142): Node M_UN0001 is floating
+
+ERROR(ORPSIM-15142): Node M_UN0002 is floating
+

@@ -1,0 +1,544 @@
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "thermo.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+.LIB "C:/ORCAD/ORCAD_16.6_LITE/TOOLS/pspice/library/mosfets.lib" 
+* From [PSPICE NETLIST] section of C:\Users\DELLGR\AppData\Roaming\SPB_16.6\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nomd.lib" 
+
+*Analysis directives: 
+.TRAN  0 10us 0 
+.TEMP 0 10 20 30 40 50 60
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source JOHNIE 
+V_Vdd         N07490 0 1.88Vdc
+M_M7         N07362 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=16u         
+M_M8         N07182 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=2.9u         
+M_M3         N07596 N07596 N07490 N07490 PFET  
++ L=1u  
++ W=1u         
+C_CL         0 N07362  2.27p  TC=0,0 
+M_M5         N07140 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=2.9u         
+V_Vss         0 N07230 1.88Vdc
+M_M1         N07596 N07362 N07140 N07140 NFET  
++ L=1u  
++ W=11u         
+M_M2         N07428 N09075 N07140 N07140 NFET  
++ L=1u  
++ W=11u         
+I_IREF         N07490 N07182 DC 49.9u  
+C_Cc         N07362 N07428  1.5p  TC=0,0 
+M_M6         N07362 N07428 N07490 N07490 PFET  
++ L=1u  
++ W=12u         
+M_M4         N07428 N07596 N07490 N07490 PFET  
++ L=1u  
++ W=1u         
+V_V2         N09075 0  
++PULSE -1 1 1n 1n 
+
+**** RESUMING thermo.cir ****
+.END
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     MOSFET MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               NFET            PFET            
+               NMOS            PMOS            
+       LEVEL    3               3            
+         TPG                   -1            
+           L  100.000000E-06  100.000000E-06 
+           W  100.000000E-06  100.000000E-06 
+          LD  164.700000E-09   22.000000E-09 
+         VTO     .786           -.9056       
+          KP   96.379000E-06   29.352000E-06 
+       GAMMA     .5863           .4863       
+         PHI     .6              .6          
+      LAMBDA    0               0            
+         RSH   85.45          104.7          
+          IS   10.000000E-15   10.000000E-15 
+          JS    0               0            
+          PB     .8              .85         
+        PBSW     .8              .85         
+          CJ  385.410000E-06  484.470000E-06 
+        CJSW  139.400000E-12  164.570000E-12 
+          MJ    1.1854           .5027       
+        MJSW     .125195         .217168     
+        CGSO  402.410000E-12   53.752000E-12 
+        CGDO  402.410000E-12   53.752000E-12 
+        CGBO  361.440000E-12  336.500000E-12 
+        NSUB   16.160000E+15   18.900000E+15 
+         NFS    5.000000E+12    3.460000E+12 
+         TOX   21.200000E-09   21.200000E-09 
+          XJ  200.000000E-09  200.000000E-09 
+          UO  591.7           180.2          
+       UCRIT   10.000000E+03   10.000000E+03 
+        VMAX  208.200000E+03  373.200000E+03 
+       DELTA     .6967          1.52         
+       THETA     .08122          .1248       
+         ETA     .07066          .1641       
+       KAPPA     .1396          9.694        
+      DIOMOD    1               1            
+         VFB    0               0            
+        LETA    0               0            
+        WETA    0               0            
+          U0    0               0            
+        TEMP    0               0            
+         VDD    5               5            
+       XPART    0               0            
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =    0.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    NFET           PFET      
+
+        VTO        8.347E-01     -9.575E-01  
+        PHI        6.600E-01      6.600E-01  
+         PB        8.420E-01      8.875E-01  
+     IS(JS)        1.048E-16      1.048E-16  
+         KP        1.110E-04      3.381E-05  
+         UO        6.816E+02      2.076E+02  
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =    0.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N07140)   -1.6694 (N07182)    -.7241 (N07230)   -1.8800 (N07362)   -1.0053     
+
+(N07428)    -.0481 (N07490)    1.8800 (N07596)    -.0113 (N09075)   -1.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -3.333E-04
+    V_Vss       -3.333E-04
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.25E-03  WATTS
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   10.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    NFET           PFET      
+
+        VTO        8.168E-01     -9.385E-01  
+        PHI        6.379E-01      6.379E-01  
+         PB        8.266E-01      8.737E-01  
+     IS(JS)        6.260E-16      6.260E-16  
+         KP        1.052E-04      3.203E-05  
+         UO        6.458E+02      1.967E+02  
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   10.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N07140)   -1.6626 (N07182)    -.7242 (N07230)   -1.8800 (N07362)   -1.0057     
+
+(N07428)    -.0704 (N07490)    1.8800 (N07596)    -.0312 (N09075)   -1.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -3.341E-04
+    V_Vss       -3.341E-04
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.26E-03  WATTS
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   20.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    NFET           PFET      
+
+        VTO        7.988E-01     -9.192E-01  
+        PHI        6.157E-01      6.157E-01  
+         PB        8.110E-01      8.598E-01  
+     IS(JS)        3.319E-15      3.319E-15  
+         KP        9.985E-05      3.041E-05  
+         UO        6.130E+02      1.867E+02  
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   20.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N07140)   -1.6555 (N07182)    -.7246 (N07230)   -1.8800 (N07362)   -1.0060     
+
+(N07428)    -.0925 (N07490)    1.8800 (N07596)    -.0511 (N09075)   -1.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -3.349E-04
+    V_Vss       -3.349E-04
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.26E-03  WATTS
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   30.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    NFET           PFET      
+
+        VTO        7.805E-01     -8.997E-01  
+        PHI        5.933E-01      5.933E-01  
+         PB        7.953E-01      8.458E-01  
+     IS(JS)        1.580E-14      1.580E-14  
+         KP        9.495E-05      2.892E-05  
+         UO        5.829E+02      1.775E+02  
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   30.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N07140)   -1.6483 (N07182)    -.7251 (N07230)   -1.8800 (N07362)   -1.0062     
+
+(N07428)    -.1145 (N07490)    1.8800 (N07596)    -.0713 (N09075)   -1.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -3.357E-04
+    V_Vss       -3.357E-04
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.26E-03  WATTS
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   40.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    NFET           PFET      
+
+        VTO        7.619E-01     -8.799E-01  
+        PHI        5.707E-01      5.707E-01  
+         PB        7.794E-01      8.316E-01  
+     IS(JS)        6.824E-14      6.824E-14  
+         KP        9.044E-05      2.754E-05  
+         UO        5.552E+02      1.691E+02  
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   40.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N07140)   -1.6410 (N07182)    -.7259 (N07230)   -1.8800 (N07362)   -1.0064     
+
+(N07428)    -.1364 (N07490)    1.8800 (N07596)    -.0916 (N09075)   -1.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -3.365E-04
+    V_Vss       -3.365E-04
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.27E-03  WATTS
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   50.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    NFET           PFET      
+
+        VTO        7.431E-01     -8.598E-01  
+        PHI        5.481E-01      5.481E-01  
+         PB        7.634E-01      8.172E-01  
+     IS(JS)        2.698E-13      2.698E-13  
+         KP        8.627E-05      2.627E-05  
+         UO        5.297E+02      1.613E+02  
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   50.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N07140)   -1.6334 (N07182)    -.7270 (N07230)   -1.8800 (N07362)   -1.0066     
+
+(N07428)    -.1581 (N07490)    1.8800 (N07596)    -.1123 (N09075)   -1.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -3.373E-04
+    V_Vss       -3.373E-04
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.27E-03  WATTS
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     TEMPERATURE-ADJUSTED VALUES      TEMPERATURE =   60.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+ **** MOSFET MODEL PARAMETERS
+
+                    NFET           PFET      
+
+        VTO        7.240E-01     -8.394E-01  
+        PHI        5.252E-01      5.252E-01  
+         PB        7.472E-01      8.027E-01  
+     IS(JS)        9.843E-13      9.843E-13  
+         KP        8.242E-05      2.510E-05  
+         UO        5.060E+02      1.541E+02  
+
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   60.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(N07140)   -1.6257 (N07182)    -.7282 (N07230)   -1.8800 (N07362)   -1.0067     
+
+(N07428)    -.1798 (N07490)    1.8800 (N07596)    -.1331 (N09075)   -1.0000 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_Vdd       -3.382E-04
+    V_Vss       -3.382E-04
+    V_V2         0.000E+00
+
+    TOTAL POWER DISSIPATION   1.27E-03  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 09/24/16 23:13:49 ****** PSpice Lite (October 2012) ****** ID# 10813 ****
+
+ ** Profile: "SCHEMATIC1-thermo"  [ C:\ORCAD\ORCAD_16.6_LITE\TOOLS\CAPTURE\johnie -PSpiceFiles\SCHEMATIC1\thermo.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .38
+

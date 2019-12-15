@@ -1,0 +1,31 @@
+* source JOHNIE 
+V_Vdd         N07490 0 1.88Vdc
+M_M7         N07362 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=16u         
+M_M8         N07182 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=2.9u         
+M_M3         N07596 N07596 N07490 N07490 PFET  
++ L=1u  
++ W=1u         
+C_CL         0 N07362  2.27p  TC=0,0 
+M_M5         N07140 N07182 N07230 N07230 NFET  
++ L=1u  
++ W=2.9u         
+V_Vss         0 N07230 1.88Vdc
+M_M1         N07596 N08398 N07140 N07140 NFET  
++ L=1u  
++ W=11u         
+M_M2         N07428 0 N07140 N07140 NFET  
++ L=1u  
++ W=11u         
+I_IREF         N07490 N07182 DC 49.9u  
+C_Cc         N07362 N07428  1.5p  TC=0,0 
+M_M6         N07362 N07428 N07490 N07490 PFET  
++ L=1u  
++ W=12u         
+M_M4         N07428 N07596 N07490 N07490 PFET  
++ L=1u  
++ W=1u         
+V_V1         N08398 0 DC 0Vdc AC 1Vac 
